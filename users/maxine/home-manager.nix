@@ -62,6 +62,8 @@ in {
     pkgs.ripgrep
     pkgs.tree
     pkgs.watch
+    pkgs.vim
+    pkgs.neovim
 
   ] ++ (lib.optionals isDarwin [
     # This is automatically setup on Linux
@@ -219,6 +221,16 @@ in {
       "wireless _first_".enable = false;
       "battery all".enable = false;
     };
+  };
+
+  programs.vscode = {
+    enable = true;
+    package = pkgs.vscodium;
+    extensions = with pkgs.vscode-extensions; [
+      catppuccin.catppuccin-vsc
+      rust-lang.rust-analyzer
+      jnoortheen.nix-ide
+    ];
   };
 
   xresources.extraConfig = builtins.readFile ./Xresources;
