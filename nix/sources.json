@@ -34,29 +34,5 @@
         "type": "tarball",
         "url": "https://github.com/dracula/tmux/archive/d311e94d868b0d59a896a4c09b6f658b1059519f.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
-    "vim-dracula": {
-        "branch": "master",
-        "description": "🧛🏻‍♂️ Dark theme for Vim",
-        "homepage": "https://draculatheme.com/vim",
-        "owner": "dracula",
-        "repo": "vim",
-        "rev": "d7723a842a6cfa2f62cf85530ab66eb418521dc2",
-        "sha256": "1qzil8rwpdzf64gq63ds0cf509ldam77l3fz02g1mia5dry75r02",
-        "type": "tarball",
-        "url": "https://github.com/dracula/vim/archive/d7723a842a6cfa2f62cf85530ab66eb418521dc2.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
-    "vim-fish": {
-        "branch": "master",
-        "description": "Vim support for editing fish scripts",
-        "homepage": null,
-        "owner": "dag",
-        "repo": "vim-fish",
-        "rev": "50b95cbbcd09c046121367d49039710e9dc9c15f",
-        "sha256": "1yvjlm90alc4zsdsppkmsja33wsgm2q6kkn9dxn6xqwnq4jw5s7h",
-        "type": "tarball",
-        "url": "https://github.com/dag/vim-fish/archive/50b95cbbcd09c046121367d49039710e9dc9c15f.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }

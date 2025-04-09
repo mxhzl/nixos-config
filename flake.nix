@@ -31,13 +31,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # I think technically you're not supposed to override the nixpkgs
-    # used by neovim but recently I had failures if I didn't pin to my
-    # own. We can always try to remove that anytime.
-    neovim-nightly-overlay = {
-      url = "github:nix-community/neovim-nightly-overlay";
-    };
-
     # Non-flakes
   };
 

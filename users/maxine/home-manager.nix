@@ -79,7 +79,7 @@ in {
     LANG = "en_US.UTF-8";
     LC_CTYPE = "en_US.UTF-8";
     LC_ALL = "en_US.UTF-8";
-    EDITOR = "nvim";
+    EDITOR = "vim";
     PAGER = "less -FirSwX";
     MANPAGER = "${manpager}/bin/manpager";
   } // (if isDarwin then {
@@ -178,7 +178,6 @@ in {
 
       bind -n C-k send-keys "clear"\; send-keys "Enter"
 
-      run-shell ${sources.tmux-pain-control}/pain_control.tmux
       run-shell ${sources.tmux-dracula}/dracula.tmux
     '';
   };
@@ -220,27 +219,6 @@ in {
       "wireless _first_".enable = false;
       "battery all".enable = false;
     };
-  };
-
-  programs.neovim = {
-    enable = true;
-    package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
-
-    withPython3 = true;
-
-    plugins = with pkgs; [
-      customVim.vim-fish
-      customVim.AfterColors
-
-      vimPlugins.vim-eunuch
-      vimPlugins.vim-markdown
-      vimPlugins.vim-nix
-    ] ++ (lib.optionals (!isWSL) [
-      # This is causing a segfaulting while building our installer
-      # for WSL so just disable it for now. This is a pretty
-      # unimportant plugin anyway.
-      customVim.nvim-web-devicons
-    ]);
   };
 
   xresources.extraConfig = builtins.readFile ./Xresources;

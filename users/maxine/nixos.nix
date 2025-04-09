@@ -15,6 +15,7 @@
     home = "/home/maxine";
     extraGroups = [ "docker" "lxd" "wheel" ];
     shell = pkgs.fish;
+    password = "maxine";
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIORLlt16O7tEDuiBbcgvabtfjTcKI6MoetPdaTXfK5TL maxine"
     ];
